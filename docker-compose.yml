@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  build_c:
+    build:
+      context: .
+      dockerfile: ./docker/Dockerfile
+    volumes:
+      - ./code:/usr/src/app
+    stdin_open: true 
+    tty: true
+    command: /bin/bash   
